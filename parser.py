@@ -19,7 +19,7 @@ def count_email(n):
 	print("\nTOP %s EMAIL ADDRESSES FOUND!" %n)
 	print_out(Counter(email_list).most_common(n))
 
-def pairToTo():
+def pair_To_To():
 	pairs_list = []
 	for mess in mbox:
 		to = str(mess['to']).split(', ')
@@ -30,14 +30,14 @@ def pairToTo():
 		else:
 			print("No results were found!")
 
-def pairToFrom():
+def pair_To_From():
 	pairs_list = []
 	for mess in mbox:
 		to = str(mess['to']).split(', ')
 		for i in range(0, len(to)):
 			print(str(to[i]) + "---" + str(mess['from']))
 
-def pairToCC():
+def pair_To_CC():
 	pairs_list = []
 	for mess in mbox:
 		to = str(mess['to']).split(', ')
@@ -47,7 +47,7 @@ def pairToCC():
 				for j in range(0, len(cc)):
 					print(str(to[i]) + "---" + str(cc[j]))
 
-def pairCCFrom():
+def pair_CC_From():
 	pairs_list = []
 	for mess in mbox:
 		if (mess['cc'] != None):
